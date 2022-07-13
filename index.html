@@ -7,6 +7,75 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+		<script type="text/javascript">
+			function sendEmail() {
+
+				toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-left",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
+				
+			let name=$("#name").val();
+			let email=$("#email").val();
+			let subject=$("#subject").val();
+			let message=$("#message").val();
+			alert(message);
+			  Email.send({
+				Host: "smtp.elasticemail.com",
+				Username: "angelo.romero@gmail.com",
+				Password: "64233792FEB4F15DEC5BD87DD0C2F8A9D4A3",
+				To: 'angelo.romero@gmail.com',
+				From: "angeloromero@workmate.cl",
+				Subject: "😃🔥 Solicitud de contacto😃🔥",
+				Body:`<center>
+				<table width="400" border="0" cellpadding="1" cellspacing="1">
+  <tr>
+    <td bgcolor="#CC9900">Nombre Contacto </td>
+    <td>${name}</td>
+  
+  </tr>
+  <tr>
+    <td bgcolor="#CC9900">Titulo Correo</td>
+    <td>${subject}</td>
+   
+  </tr>
+  <tr>
+    <td bgcolor="#CC9900">Mail Contacto </td>
+    <td>${email}</td>
+    
+  </tr>
+  <tr>
+    <td bgcolor="#CC9900">Mensaje Contacto </td>
+    <td>${message}</td>
+   
+  </tr>
+</table></center>
+				`,
+			  })
+			  
+				.then(function (message) {
+					toastr.success('Me pondre en contacto a la brevedad contigo, saludos!!',"Correo enviado")
+				});
+			}
+		  </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 	</head>
 	<body class="is-preload">
 
@@ -27,12 +96,15 @@
 					</ul>
 				</nav>
 				<footer>
-					<ul class="icons"><!--
+					<ul class="icons">
+						
+						<!--
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.instagram.com/angeloromeroparra/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="#"class="icon brands fa-whatsapp" ></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -77,7 +149,7 @@
 										<i class="fa-brands fa-js"></i>-->
 										<li class="icon solid fa-code">Escribir código</li>
 										<li class="icon solid fa-js">Uso de metogologias agiles</li>
-										<li class="icon solid fa-book">Planificación de proyectos</li>
+										<li class="icon solid fa-users">Planificación de proyectos</li>
 										<li class="icon solid fa-coffee">Drink much coffee</li>
 										<li class="icon solid fa-bolt">Lightning bolt</li>
 										<li class="icon solid fa-users">Shadow clone technique</li>
@@ -120,7 +192,7 @@
 							<section id="four">
 								<div class="container">
 									<h3>Contactame</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<p>¿Quieres trabajar juntos o tienes alguna pregunta?.</p>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
@@ -129,7 +201,7 @@
 											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="button" class="primary" value="Send Message" onclick="sendEmail()"/></li>
 													<li><input type="reset" value="Reset Form" /></li>
 												</ul>
 											</div>
@@ -490,6 +562,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 	</body>
 </html>
