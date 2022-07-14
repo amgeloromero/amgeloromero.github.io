@@ -35,7 +35,9 @@
 			let email=$("#email").val();
 			let subject=$("#subject").val();
 			let message=$("#message").val();
-			alert(message);
+			
+			
+			if(name!="" && email!="" && subject!="" && message!=""){
 			  Email.send({
 				Host: "smtp.elasticemail.com",
 				Username: "angelo.romero@gmail.com",
@@ -70,8 +72,13 @@
 			  })
 			  
 				.then(function (message) {
-					toastr.success('Me pondre en contacto a la brevedad contigo, saludos!!',"Correo enviado")
+					toastr.success('Me pondre en contacto a la brevedad contigo, saludos!!',"Correo enviado");
 				});
+
+			}else{
+
+				toastr.error('Debe llenar todos los campos',"Atención")
+			}
 			}
 		  </script>
 
@@ -104,7 +111,7 @@
 						<li><a href="https://www.instagram.com/angeloromeroparra/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="mailto:angelo.romero@gmail.com"  class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						<li><a href="https://api.whatsapp.com/send?phone=56999051382&text=hola%F0%9F%98%80"class="icon brands fa-whatsapp" ></a></li>
+						<li><a href="https://api.whatsapp.com/send?phone=56990513982&text=hola%F0%9F%98%80"class="icon brands fa-whatsapp" ></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -125,7 +132,7 @@
 										<h2>Acerca de mi</h2>
 										<p>
                                             
-											Hola, mi nombre es Angelo, soy un ingeniero de software con sólidas habilidades para diseñar soluciones tecnológicas, con experiencia  
+											Hola, mi nombre es Angelo, soy ingeniero de software con sólidas habilidades para plantear soluciones tecnológicas, con experiencia  
 											en diseño y creación de software.
 					
                                             <br />
@@ -149,7 +156,7 @@
 										<i class="fa-brands fa-js"></i>
 										<i class="icon solid fab fa-php"></i>-->
 										<li class="icon solid fa-code">Desarrollo</li>
-										<li class="icon solid fa-bolt">Uso de metogologias agiles</li>
+										<li class="icon solid fa-bolt">Uso de Metodologías agiles</li>
 										<li class="icon solid fa-users">Planificación de proyectos</li>
 									<!--	<li class="icon solid fa-coffee">Drink much coffee</li>
 										<li class="icon solid fa-bolt">Lightning bolt</li>
@@ -160,7 +167,7 @@
 
 
 								<div class="container">
-									<h3>Tecnologias que mas uso</h3>
+									<h3>Tecnologías que mas uso</h3>
 									<h5>&nbsp;</h5>
 									
 									<div class="box alt">
@@ -183,13 +190,13 @@
 							<section id="three">
 								<div class="container">
 									<h3>Algunos logros que he realizado</h3>
-									<p>Estos son algunos logros que he realizado en mi vida.</p>
+									<p> &nbsp;</p>
 									<div class="features">
 										<article>
 											<a href="#" class="image"><img src="images/ucen.jpg" alt="" width="20" /></a>
 											<div class="inner">
 												<h4>Universidad Central</h4>
-												<p>Magistert en direccion de proyectos informaticos.</p>
+												<p>Magister en dirección de proyectos informáticos.</p>
 											</div>
 										</article>
 										<article>
@@ -231,8 +238,8 @@
 											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="button" class="primary" value="Send Message" onclick="sendEmail()"/></li>
-													<li><input type="reset" value="Reset Form" /></li>
+													<li><input type="button" class="primary" value="Enviar mensaje" onclick="sendEmail()"/></li>
+													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
 										</div>
