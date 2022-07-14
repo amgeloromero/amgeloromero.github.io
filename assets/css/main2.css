@@ -118,7 +118,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #4acaa8 !important;
+			color: #ff7050 !important;
 		}
 
 	strong, b {
@@ -1786,7 +1786,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: #FF5733;
 		font-size: 3.5em;
 	}
 
@@ -1849,7 +1849,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: #fd7b5d;
 		}
 
 	select {
@@ -2403,7 +2403,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #4acaa8;
+				background: #ff937b;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2619,7 +2619,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #4acaa8;
+			background-color: #c96b54;
 			color: #ffffff !important;
 		}
 
@@ -2627,7 +2627,7 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #5ed0b1;
+				background-color: #FF5733;
 			}
 
 			input[type="submit"].primary:active,
@@ -2701,7 +2701,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background: #ec7256;
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2790,7 +2790,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
+					border-top: solid 2px #cf5c5c;
 					display: block;
 					padding: 0;
 				}
@@ -2808,8 +2808,8 @@ input, select, textarea {
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
+							background: #ffdada;
+							color: #582d2d !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -3077,7 +3077,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #FF5733;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
